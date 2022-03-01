@@ -114,3 +114,7 @@ img.medium {
   align-items: center;
   justify-content: center;
 }
+
+.rating span:last-child {
+  color: #404040;
+}

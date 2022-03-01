@@ -19,7 +19,7 @@ const data = {
             price: 25.95,
             brand: 'Barlean\'s',
             rating: 3.5,
-            numReviews: 20,
+            numReviews: 3,
             description: 'high quality product',
         },
         {
@@ -30,7 +30,7 @@ const data = {
             price: 22.48,
             brand: 'Barlean\'s',
             rating: 5,
-            numReviews: 20,
+            numReviews: 15,
             description: 'high quality product',
         },
         {
@@ -41,7 +41,7 @@ const data = {
             price: 37.24,
             brand: 'Barlean\'s',
             rating: 1,
-            numReviews: 20,
+            numReviews: 2,
             description: 'high quality product',
         },
         {
@@ -52,7 +52,7 @@ const data = {
             price: 28.56,
             brand: 'Barlean\'s',
             rating: 5,
-            numReviews: 20,
+            numReviews: 30,
             description: 'high quality product',
         },
         {
