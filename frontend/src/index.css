@@ -18,16 +18,16 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #222;
 }
 main {
   grid-area: main;
@@ -35,7 +35,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #222;
   color: #ffffff;
 }
 /* Common */
@@ -53,7 +53,8 @@ a {
   text-decoration: none;
   text-align: center;
 }
-a:hover {
+a:hover,
+.pill.link:hover {
   color: #ff8000;
 }
 ul {
@@ -64,6 +65,10 @@ ul {
 li {
   margin-top: 1rem;
 }
+
+input,
+select,
+textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -72,11 +77,17 @@ button {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
+
+input:hover,
+select:hover,
+textarea:hover,
 button:hover {
-  border: 0.1rem solid #404040;
+  border: 0.1rem solid #222;
 }
 button.primary {
   background-color: #f0c040;
@@ -94,13 +105,32 @@ a.brand {
   font-size: 3rem;
   font-weight: bold;
 }
+.cart {
+  position: relative;
+  padding-right: 0.5rem;
+}
+.badge {
+  position: absolute;
+  top: 0.8rem;
+  right: 6.7rem;
+  background-color: #f02020;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.3rem;
+  margin-left: 0.2rem;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 }
 .row.center {
+  justify-content: center;
+}
+.align {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 .row.top {
@@ -112,10 +142,17 @@ a.brand {
 .col-2 {
   flex: 2 1 50rem;
 }
+.min-30 {
+  min-width: 30rem;
+}
 /* Image */
 img {
   border-radius: 0.5rem;
   margin: 1rem 0 1rem 1rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
 }
 img.medium {
   max-width: 29rem;
@@ -132,6 +169,7 @@ img.large {
   border-radius: 0.5rem;
   margin: 1rem;
 }
+
 .card-body {
   padding: 1rem;
 }
@@ -156,7 +194,17 @@ img.large {
 }
 
 .rating span:last-child {
-  color: #404040;
+  color: #222;
+}
+.pill {
+  height: 20px;
+  width: 150px;
+  padding: 0.6rem;
+  background-color: #222;
+  border-radius: 1rem;
+}
+.pill.link {
+  color: #fff;
 }
 
 /* Alert */
