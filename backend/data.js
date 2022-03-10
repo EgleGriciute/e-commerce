@@ -8,8 +8,8 @@ const data = {
       isAdmin: true,
     },
     {
-      name: "Test",
-      email: "test@gmail.com",
+      name: "Tom",
+      email: "tom@gmail.com",
       password: bcrypt.hashSync("1234", 8),
       isAdmin: false,
     },
