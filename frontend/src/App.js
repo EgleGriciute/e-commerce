@@ -4,13 +4,19 @@ import { useSelector } from "react-redux";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
-
+import SigninScreen from "./screens/SigninScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
   return (
     <BrowserRouter>
+      <div className="hero">
+        <div className="hero-image"></div>
+      </div>
+
       <div className="grid-container">
         <header className="row">
           <div className="align">
@@ -25,7 +31,11 @@ function App() {
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
-            <Link to="/signin">Sign In</Link>
+            {userInfo ? (
+              <Link to="#">{userInfo.name}</Link>
+            ) : (
+              <Link to="/signin">Sign In</Link>
+            )}
           </div>
         </header>
         <main>
@@ -37,6 +47,7 @@ function App() {
               element={<ProductScreen />}
               exact
             ></Route>
+            <Route path="/signin" element={<SigninScreen />}></Route>
             <Route path="/" element={<HomeScreen />} exact></Route>
           </Routes>
         </main>

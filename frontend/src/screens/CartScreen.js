@@ -38,7 +38,10 @@ export default function CartScreen(props) {
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
-            Cart is empty<Link to="/"> Go Shopping</Link>
+            Cart is empty
+            <Link to="/">
+              &nbsp;<div className="pill link shopping">Go Shopping</div>
+            </Link>
           </MessageBox>
         ) : (
           <ul>
@@ -72,7 +75,9 @@ export default function CartScreen(props) {
                         ))}
                       </select>
                     </div>
-                    <div>€{item.price}</div>
+                    <div className="price">
+                      <div>€{item.price}</div>
+                    </div>
                     <div>
                       <button
                         type="button"
